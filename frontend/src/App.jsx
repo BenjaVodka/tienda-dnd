@@ -3,5 +3,6 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Home from './pages/Home'
 
-function App() { return <h1>Tienda D&D</h1>; } export default App;
+function App() { return <Home />; } export default App;
