@@ -1,8 +1,20 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
-import Home from './pages/Home'
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import ProductDetail from './pages/ProductDetail';
+import Carrito from './pages/Carrito';
 
-function App() { return <Home />; } export default App;
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/producto/:id" element={<ProductDetail />} />
+        <Route path="/carrito" element={<Carrito />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
